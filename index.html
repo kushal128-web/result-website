@@ -1,39 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <title>Autonomous Student Result</title>
 <style>
-body{font-family:Arial, sans-serif;background:#f2f4f8;margin:0}
-.header{background:#0b5fa5;color:white;padding:12px 20px}
-.container{width:95%;margin:20px auto;background:white;padding:20px;border-radius:6px}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th,td{border:1px solid #ccc;padding:6px;text-align:center}
-th{background:#e9f1f8}
-.summary{display:flex;gap:10px;margin-top:20px}
-.box{flex:1;padding:10px;color:white;border-radius:5px;text-align:center;font-weight:bold}
-.sgpa{background:#2b7bb9}
-.cgpa{background:#2b7bb9}
-.perc{background:#2b7bb9}
-.result{background:#3aa655}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f2f2f2}
+
+/* TOP HEADER */
+.topbar{
+background:#0b5fa5;
+color:white;
+padding:10px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.menu{
+background:#0b5fa5;
+color:white;
+padding:8px 20px;
+font-size:14px;
+}
+.menu span{margin-right:20px}
+
+/* BREADCRUMB */
+.breadcrumb{
+background:#e9ecef;
+padding:8px 20px;
+font-size:14px;
+}
+
+/* WARNING BAR */
+.warning{
+background:#c0392b;
+color:white;
+padding:6px 20px;
+font-size:13px;
+}
+
+/* MAIN CONTAINER */
+.container{
+background:white;
+margin:15px;
+padding:15px;
+border-radius:5px;
+}
+
+/* DROPDOWN SECTION */
+.selectbar{
+display:flex;
+gap:40px;
+margin-bottom:15px;
+}
+.selectbar div{
+background:#f5f5f5;
+padding:10px;
+border-radius:5px;
+}
+
+/* INFO */
+.info{
+background:#f1f7fd;
+padding:10px;
+border:1px solid #ccc;
+margin-bottom:15px;
+}
+
+/* TABLE */
+table{
+width:100%;
+border-collapse:collapse;
+font-size:13px;
+}
+th,td{
+border:1px solid #ccc;
+padding:6px;
+text-align:center;
+}
+th{background:#eef3f7}
+
+/* FOOTER BOXES */
+.summary{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+.box{
+flex:1;
+padding:10px;
+color:white;
+text-align:center;
+border-radius:5px;
+font-weight:bold;
+}
+.blue{background:#2d7dbf}
+.green{background:#3aa655}
 </style>
 </head>
+
 <body>
 
-<div class="header">
-<h2>CMR University - Autonomous Student Result</h2>
+<div class="topbar">
+<div><b>CMR University</b></div>
+<div>Kushal Gowda G (Student)</div>
+</div>
+
+<div class="menu">
+<span>Institute</span>
+<span>Personal</span>
+<span>Academic Schedules</span>
+<span>Academic Functions</span>
+<span>Facilities</span>
+<span>Communication</span>
+<span>OSA</span>
+<span>DCCC</span>
+<span>CSP</span>
+</div>
+
+<div class="breadcrumb">
+Academic Functions &gt; University Exam/Result &gt; Autonomous Student Result
+</div>
+
+<div class="warning">
+Please select at least one Category for result.
 </div>
 
 <div class="container">
-<h3>School of Engineering and Technology</h3>
+
+<div class="selectbar">
+<div>
+<b>Select Exam:</b><br>
+147. REGULAR-III,VII-SOET-UG-SEE
+</div>
+<div>
+<b>Select Term:</b><br>
+III
+</div>
+</div>
+
+<div class="info">
+<b>Info</b><br>
+Above 2021 batches SGPA should be greater than or equal to 4<br>
+Below 2021 batches SGPA should be greater than or equal to 5<br>
+If SGPA is not in above criteria then Result shows Incomplete
+</div>
+
+<h3 style="text-align:center">
+School of Engineering and Technology<br>
+B.Tech Computer Science & Engineering
+</h3>
+
 <p><b>Student Name:</b> Kushal Gowda G</p>
 <p><b>Academic Batch:</b> 2024-2028</p>
 <p><b>Seat No:</b> 24BBTCS128</p>
 
 <table>
 <tr>
-<th>Sr.No</th><th>Course Code</th><th>Course</th><th>Internal</th><th>External</th><th>Total</th>
-<th>Credit</th><th>Grade</th><th>Pointer</th><th>Credit Grade</th><th>Month & Year</th>
+<th>Sr.No</th><th>Course Code</th><th>Course</th>
+<th>Internal</th><th>External</th><th>Total</th>
+<th>Credit</th><th>Grade</th><th>Pointer</th>
+<th>Credit Grade</th><th>Month & Year</th>
 </tr>
 
 <tr><td>1</td><td>4CSGC2083</td><td>Software Engineering</td><td>47</td><td>21</td><td>68</td><td>3</td><td>B+</td><td>7</td><td>21</td><td>Nov 2025</td></tr>
@@ -46,17 +171,24 @@ th{background:#e9f1f8}
 <tr><td>8</td><td>GPSDA1022</td><td>Career Preparedness Program - II</td><td>39</td><td>-</td><td>39</td><td>0</td><td>A</td><td>8</td><td>0</td><td>Nov 2025</td></tr>
 
 <tr>
-<th colspan="9">TOTAL</th><th>177</th><th></th>
+<th colspan="9">TOTAL</th>
+<th>177</th>
+<th></th>
 </tr>
 </table>
 
 <div class="summary">
-<div class="box sgpa">SGPA: 8.43</div>
-<div class="box cgpa">CGPA: 8.43</div>
-<div class="box perc">Percentage: 82.15%</div>
-<div class="box result">Result: Successful</div>
+<div class="box blue">SGPA: 8.43</div>
+<div class="box blue">CGPA: 8.43</div>
+<div class="box blue">Percentage: 82.15%</div>
+<div class="box green">Result: Successful</div>
 </div>
 
+<p style="text-align:center;margin-top:10px;">
+The above information shall not be considered as official document for any purpose
+</p>
+
 </div>
+
 </body>
 </html>
