@@ -12,30 +12,22 @@ body{
   color:#2c3e50;
 }
 
-/* TOP BAR */
+/* HEADER */
 .topbar{
   background:#0b5fa5;
   color:white;
   padding:10px 16px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-}
-.top-left{
-  display:flex;
   align-items:center;
-  gap:10px;
 }
-.top-left img{
-  height:36px;
-}
+.top-left img{height:36px;margin-right:10px}
 
 /* MENU */
 .menu{
   background:#0b5fa5;
   color:white;
   padding:6px 16px;
-  font-size:14px;
 }
 .menu span{margin-right:18px}
 
@@ -43,10 +35,9 @@ body{
 .breadcrumb{
   background:#eef2f6;
   padding:8px 16px;
-  font-size:14px;
 }
 
-/* MAIN CONTAINER */
+/* CONTAINER */
 .container{
   background:#fff;
   margin:16px;
@@ -55,7 +46,7 @@ body{
   box-shadow:0 0 3px rgba(0,0,0,.15);
 }
 
-/* INFO BOX */
+/* INFO */
 .info{
   background:#f6fbff;
   border:1px solid #cfe3f6;
@@ -64,7 +55,7 @@ body{
   margin-bottom:12px;
 }
 
-/* CENTER TITLE */
+/* TITLE */
 .center-title{
   text-align:center;
   color:#0b5fa5;
@@ -72,48 +63,30 @@ body{
   margin-bottom:10px;
 }
 
-/* TABLE STYLE (ERP LIKE) */
+/* TABLE */
 table{
   width:100%;
   border-collapse:collapse;
   font-size:13px;
-  background:#ffffff;
 }
-
-th, td{
+th,td{
   border:1px solid #e2e6ea;
   padding:6px 8px;
-  color:#2c3e50;
 }
-
 th{
   background:#edf5fd;
   font-weight:600;
-  text-align:center;
 }
-
-/* special rows like Student Name / Exam Name */
-.info-row td{
+.header-row td{
   background:#edf5fd;
   font-weight:600;
-  color:#1f3c5a;
 }
+.course{text-align:left}
 
-td{
-  background:#ffffff;
-  text-align:center;
-}
-
-.course{
-  text-align:left;
-}
-
-/* TOTAL ROW */
-.total-row th,
-.total-row td{
+/* TOTAL */
+.total-row th,.total-row td{
   background:#edf5fd;
   font-weight:600;
-  color:#1f3c5a;
 }
 
 /* SUMMARY */
@@ -133,13 +106,7 @@ td{
 .blue{background:#2f80c0}
 .green{background:#3aa655}
 
-/* FOOT NOTE */
-.note{
-  text-align:center;
-  margin-top:8px;
-  font-size:13px;
-  color:#555;
-}
+.note{text-align:center;margin-top:8px;font-size:13px}
 </style>
 </head>
 
@@ -147,94 +114,89 @@ td{
 
 <div class="topbar">
   <div class="top-left">
-    <img src="cmr.png" alt="CMR Logo">
-    <img src="juno.png" alt="Juno Logo">
+    <img src="cmr.png">
+    <img src="juno.png">
   </div>
   <div>Kushal Gowda G (Student)</div>
 </div>
 
 <div class="menu">
-  <span>Institute</span>
-  <span>Personal</span>
-  <span>Academic Schedules</span>
-  <span>Academic Functions</span>
-  <span>Facilities</span>
-  <span>Communication</span>
-  <span>OSA</span>
-  <span>DCCC</span>
-  <span>CSP</span>
+<span>Institute</span><span>Personal</span><span>Academic Schedules</span>
+<span>Academic Functions</span><span>Facilities</span><span>Communication</span>
+<span>OSA</span><span>DCCC</span><span>CSP</span>
 </div>
 
 <div class="breadcrumb">
-  ACADEMIC FUNCTIONS &gt; UNIVERSITY EXAM/RESULT &gt; AUTONOMOUS STUDENT RESULT
+ACADEMIC FUNCTIONS &gt; UNIVERSITY EXAM/RESULT &gt; AUTONOMOUS STUDENT RESULT
 </div>
 
 <div class="container">
 
-  <div class="info">
-    Above 2021 batches SGPA should be greater than or equal to 4<br>
-    Below 2021 batches SGPA should be greater than or equal to 5<br>
-    If SGPA is not in above criteria then Result shows Incomplete
-  </div>
+<div class="info">
+Above 2021 batches SGPA should be greater than or equal to 4<br>
+Below 2021 batches SGPA should be greater than or equal to 5<br>
+If SGPA is not in above criteria then Result shows Incomplete
+</div>
 
-  <div class="center-title">
-    School of Engineering and Technology<br>
-    Off Hennur, Bagalur Main Road, Chagalatti, Bangalore-562149<br>
-    [ B.Tech. Computer Science & Engineering ]
-  </div>
+<div class="center-title">
+School of Engineering and Technology<br>
+Off Hennur, Bagalur Main Road, Chagalatti, Bangalore-562149<br>
+[ B.Tech. Computer Science & Engineering ]
+</div>
 
-  <table>
+<table>
 
-    <!-- THESE TWO ROWS NOW MATCH HEADER COLOR -->
-    <tr class="info-row">
-      <td colspan="5"><b>Student Name:</b> Kushal Gowda G</td>
-      <td colspan="6"><b>Exam Name:</b> 147. REGULAR-III, VII-SOET-UG-SEE NOV 2025-2024,2023,2022 BATCHES (Term - III)</td>
-    </tr>
-    <tr class="info-row">
-      <td colspan="5"><b>Academic Batch:</b> 2024-2028</td>
-      <td colspan="6"><b>Seat No:</b> 24BBTCS128</td>
-    </tr>
+<!-- EXACT ERP STYLE HEADER BLOCK -->
+<tr class="header-row">
+  <td colspan="5"><b>Student Name:</b> Kushal Gowda G</td>
+  <td colspan="6"><b>Exam Name:</b> 147. REGULAR-III, VII-SOET-UG-SEE NOV 2025-2024,2023,2022 BATCHES (Term - III)</td>
+</tr>
+<tr class="header-row">
+  <td colspan="5"><b>Academic Batch:</b> 2024-2028</td>
+  <td colspan="6"><b>Seat No:</b> 24BBTCS128</td>
+</tr>
 
-    <tr>
-      <th>Sr.No</th>
-      <th>Course Code</th>
-      <th>Course</th>
-      <th>Internal Marks</th>
-      <th>External Marks</th>
-      <th>Total Marks</th>
-      <th>Credit Point (C)</th>
-      <th>Grade</th>
-      <th>Pointer (G)</th>
-      <th>Credit Grade (C×G)</th>
-      <th>Month & Year</th>
-    </tr>
+<tr>
+<th>Sr.No</th>
+<th>Course Code</th>
+<th>Course</th>
+<th>Internal Marks</th>
+<th>External Marks</th>
+<th>Total Marks</th>
+<th>Credit Point (C)</th>
+<th>Grade</th>
+<th>Pointer (G)</th>
+<th>Credit Grade (C×G)</th>
+<th>Month & Year</th>
+</tr>
 
-    <tr><td>1</td><td>4CSGC2083</td><td class="course">Software Engineering</td><td>47</td><td>21</td><td>68</td><td>3</td><td>B+</td><td>7</td><td>21</td><td>Nov 2025</td></tr>
-    <tr><td>2</td><td>4CSGC2092</td><td class="course">Computer Organization and Architecture</td><td>44</td><td>31</td><td>75</td><td>3</td><td>A</td><td>8</td><td>24</td><td>Nov 2025</td></tr>
-    <tr><td>3</td><td>4CSPL1022</td><td class="course">Data Structures</td><td>43</td><td>36</td><td>79</td><td>4</td><td>A</td><td>8</td><td>32</td><td>Nov 2025</td></tr>
-    <tr><td>4</td><td>4CSPL2023</td><td class="course">Object Oriented Programming using Java</td><td>40</td><td>40</td><td>80</td><td>3</td><td>A</td><td>8</td><td>24</td><td>Nov 2025</td></tr>
-    <tr><td>5</td><td>4MATH2042</td><td class="course">Probability, Statistics and Numerical Methods</td><td>49</td><td>46</td><td>95</td><td>4</td><td>O</td><td>10</td><td>40</td><td>Nov 2025</td></tr>
-    <tr><td>6</td><td>CKSMM1012</td><td class="course">Critical Inquiry</td><td>45</td><td>-</td><td>45</td><td>1</td><td>A+</td><td>9</td><td>9</td><td>Nov 2025</td></tr>
-    <tr><td>7</td><td>CPSES1013</td><td class="course">Making with Electronics</td><td>46</td><td>46</td><td>92</td><td>3</td><td>A+</td><td>9</td><td>27</td><td>Nov 2025</td></tr>
-    <tr><td>8</td><td>GPSDA1022</td><td class="course">Career Preparedness Program - II</td><td>39</td><td>-</td><td>39</td><td>0</td><td>A</td><td>8</td><td>0</td><td>Nov 2025</td></tr>
+<tr><td>1</td><td>4CSGC2083</td><td class="course">Software Engineering</td><td>47</td><td>21</td><td>68</td><td>3</td><td>B+</td><td>7</td><td>21</td><td>Nov 2025</td></tr>
+<tr><td>2</td><td>4CSGC2092</td><td class="course">Computer Organization and Architecture</td><td>44</td><td>31</td><td>75</td><td>3</td><td>A</td><td>8</td><td>24</td><td>Nov 2025</td></tr>
+<tr><td>3</td><td>4CSPL1022</td><td class="course">Data Structures</td><td>43</td><td>36</td><td>79</td><td>4</td><td>A</td><td>8</td><td>32</td><td>Nov 2025</td></tr>
+<tr><td>4</td><td>4CSPL2023</td><td class="course">Object Oriented Programming using Java</td><td>40</td><td>40</td><td>80</td><td>3</td><td>A</td><td>8</td><td>24</td><td>Nov 2025</td></tr>
+<tr><td>5</td><td>4MATH2042</td><td class="course">Probability, Statistics and Numerical Methods</td><td>49</td><td>46</td><td>95</td><td>4</td><td>O</td><td>10</td><td>40</td><td>Nov 2025</td></tr>
+<tr><td>6</td><td>CKSMM1012</td><td class="course">Critical Inquiry</td><td>45</td><td>-</td><td>45</td><td>1</td><td>A+</td><td>9</td><td>9</td><td>Nov 2025</td></tr>
+<tr><td>7</td><td>CPSES1013</td><td class="course">Making with Electronics</td><td>46</td><td>46</td><td>92</td><td>3</td><td>A+</td><td>9</td><td>27</td><td>Nov 2025</td></tr>
+<tr><td>8</td><td>GPSDA1022</td><td class="course">Career Preparedness Program - II</td><td>39</td><td>-</td><td>39</td><td>0</td><td>A</td><td>8</td><td>0</td><td>Nov 2025</td></tr>
 
-    <tr class="total-row">
-      <th colspan="9">TOTAL</th>
-      <th>177</th>
-      <th></th>
-    </tr>
-  </table>
+<tr class="total-row">
+  <th colspan="9">TOTAL</th>
+  <th>177</th>
+  <th></th>
+</tr>
 
-  <div class="summary">
-    <div class="box blue">SGPA: 8.43</div>
-    <div class="box blue">CGPA: 8.43</div>
-    <div class="box blue">Percentage: 82.15%</div>
-    <div class="box green">Result: Successful</div>
-  </div>
+</table>
 
-  <div class="note">
-    The above information shall not be considered as official document for any purpose
-  </div>
+<div class="summary">
+<div class="box blue">SGPA: 8.43</div>
+<div class="box blue">CGPA: 8.43</div>
+<div class="box blue">Percentage: 82.15%</div>
+<div class="box green">Result: Successful</div>
+</div>
+
+<div class="note">
+The above information shall not be considered as official document for any purpose
+</div>
 
 </div>
 </body>
