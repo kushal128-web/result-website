@@ -5,29 +5,25 @@
 <style>
 body{
 margin:0;
-font-family:Segoe UI, Arial, sans-serif;
-background:#f4f6f9;
+font-family: Arial, Helvetica, sans-serif;
+background:#f2f4f8;
 }
 
 /* TOP BAR */
 .topbar{
 background:#0b5fa5;
 color:white;
-padding:10px 15px;
+padding:8px 15px;
 display:flex;
 align-items:center;
 justify-content:space-between;
 }
-.topbar .left{
-display:flex;
-align-items:center;
-gap:10px;
-}
 .topbar img{
 height:35px;
+margin-right:8px;
 background:white;
 padding:2px;
-border-radius:4px;
+border-radius:3px;
 }
 
 /* MENU */
@@ -44,43 +40,23 @@ font-size:14px;
 background:#eef2f6;
 padding:8px 15px;
 font-size:14px;
-color:#2c3e50;
 }
 
-/* MAIN BOX */
+/* MAIN CONTAINER */
 .container{
 background:white;
 margin:15px;
-padding:15px;
+padding:10px;
 border-radius:4px;
-box-shadow:0 0 4px rgba(0,0,0,0.1);
 }
 
-/* INFO BOX */
+/* INFO */
 .info{
 background:#f5fbff;
 border:1px solid #cce3f5;
 padding:10px;
 font-size:13px;
 margin-bottom:10px;
-}
-
-/* HEADER DETAILS */
-.details{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:10px;
-margin-bottom:10px;
-}
-.details div{
-font-size:14px;
-}
-.center-title{
-grid-column:1/4;
-text-align:center;
-font-weight:bold;
-color:#0b5fa5;
-margin-top:10px;
 }
 
 /* TABLE */
@@ -90,21 +66,28 @@ border-collapse:collapse;
 font-size:13px;
 }
 th,td{
-border:1px solid #ddd;
+border:1px solid #dcdcdc;
 padding:6px;
 text-align:center;
 }
 th{
-background:#eaf2fb;
-color:#1f3c5a;
-font-weight:600;
+background:#e9f2fb;
+font-weight:bold;
+}
+
+/* CENTER TITLE */
+.title{
+text-align:center;
+font-weight:bold;
+color:#0b5fa5;
+padding:10px;
 }
 
 /* SUMMARY */
 .summary{
 display:flex;
 gap:10px;
-margin-top:15px;
+margin-top:10px;
 }
 .box{
 flex:1;
@@ -117,12 +100,10 @@ font-weight:bold;
 .blue{background:#2f80c0}
 .green{background:#3aa655}
 
-/* FOOT NOTE */
 .note{
 text-align:center;
-margin-top:10px;
 font-size:13px;
-color:#555;
+margin-top:8px;
 }
 </style>
 </head>
@@ -130,9 +111,9 @@ color:#555;
 <body>
 
 <div class="topbar">
-<div class="left">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logo_placeholder.png/200px-Logo_placeholder.png">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logo_placeholder.png/200px-Logo_placeholder.png">
+<div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/CMR_University_logo.png/200px-CMR_University_logo.png">
+<img src="https://junocampus.com/images/logo.png">
 </div>
 <div>Kushal Gowda G (Student)</div>
 </div>
@@ -161,28 +142,40 @@ Below 2021 batches SGPA should be greater than or equal to 5<br>
 If SGPA is not in above criteria then Result shows Incomplete
 </div>
 
-<div class="center-title">
+<table>
+
+<tr>
+<td colspan="11" class="title">
 School of Engineering and Technology<br>
 Off Hennur, Bagalur Main Road, Chagalatti, Bangalore-562149<br>
 [ B.Tech. Computer Science & Engineering ]
-</div>
+</td>
+</tr>
 
-<div class="details">
-<div><b>Student Name:</b> Kushal Gowda G</div>
-<div></div>
-<div><b>Exam Name:</b> 147. REGULAR-III, VII-SOET-UG-SEE NOV 2025-2024,2023,2022 BATCHES (Term - III)</div>
-
-<div><b>Academic Batch:</b> 2024-2028</div>
-<div></div>
-<div><b>Seat No:</b> 24BBTCS128</div>
-</div>
-
-<table>
 <tr>
-<th>Sr.No</th><th>Course Code</th><th>Course</th>
-<th>Internal Marks</th><th>External Marks</th><th>Total Marks</th>
-<th>Credit Point (C)</th><th>Grade</th><th>Pointer (G)</th>
-<th>Credit Grade (C×G)</th><th>Month & Year</th>
+<td colspan="5" style="text-align:left;padding:8px;">
+<b>Student Name:</b> Kushal Gowda G<br><br>
+<b>Academic Batch:</b> 2024-2028
+</td>
+
+<td colspan="6" style="text-align:left;padding:8px;">
+<b>Exam Name:</b> 147. REGULAR-III, VII-SOET-UG-SEE NOV 2025-2024,2023,2022 BATCHES (Term - III)<br><br>
+<b>Seat No:</b> 24BBTCS128
+</td>
+</tr>
+
+<tr>
+<th>Sr.No</th>
+<th>Course Code</th>
+<th>Course</th>
+<th>Internal Marks</th>
+<th>External Marks</th>
+<th>Total Marks</th>
+<th>Credit Point (C)</th>
+<th>Grade</th>
+<th>Pointer (G)</th>
+<th>Credit Grade (C×G)</th>
+<th>Month & Year</th>
 </tr>
 
 <tr><td>1</td><td>4CSGC2083</td><td>Software Engineering</td><td>47</td><td>21</td><td>68</td><td>3</td><td>B+</td><td>7</td><td>21</td><td>Nov 2025</td></tr>
@@ -199,6 +192,7 @@ Off Hennur, Bagalur Main Road, Chagalatti, Bangalore-562149<br>
 <th>177</th>
 <th></th>
 </tr>
+
 </table>
 
 <div class="summary">
