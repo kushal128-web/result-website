@@ -5,18 +5,17 @@
 <title>Autonomous Student Result</title>
 
 <style>
-/* GLOBAL */
 body{
   margin:0;
   background:#f4f6f9;
-  font-family:"Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color:#222;
+  font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  color:#2c3e50;
 }
 
 /* TOP BAR */
 .topbar{
   background:#0b5fa5;
-  color:#fff;
+  color:white;
   padding:10px 16px;
   display:flex;
   align-items:center;
@@ -34,7 +33,7 @@ body{
 /* MENU */
 .menu{
   background:#0b5fa5;
-  color:#fff;
+  color:white;
   padding:6px 16px;
   font-size:14px;
 }
@@ -45,7 +44,6 @@ body{
   background:#eef2f6;
   padding:8px 16px;
   font-size:14px;
-  color:#333;
 }
 
 /* MAIN CONTAINER */
@@ -74,26 +72,38 @@ body{
   margin-bottom:10px;
 }
 
-/* TABLE */
+/* TABLE STYLE (ERP LIKE) */
 table{
   width:100%;
   border-collapse:collapse;
   font-size:13px;
+  background:#ffffff;
 }
 th, td{
-  border:1px solid #dcdcdc;
-  padding:6px;
-  vertical-align:middle;
+  border:1px solid #e2e6ea;
+  padding:6px 8px;
+  color:#2c3e50;
 }
 th{
-  background:#eef5fb;
+  background:#edf5fd;
   font-weight:600;
   text-align:center;
 }
-td{ text-align:center; }
+td{
+  background:#ffffff;
+  text-align:center;
+}
+.course{
+  text-align:left;
+}
 
-/* LEFT ALIGN COURSE */
-.course{text-align:left}
+/* TOTAL ROW */
+.total-row th,
+.total-row td{
+  background:#edf5fd;
+  font-weight:600;
+  color:#1f3c5a;
+}
 
 /* SUMMARY */
 .summary{
@@ -104,7 +114,7 @@ td{ text-align:center; }
 .box{
   flex:1;
   padding:10px;
-  color:#fff;
+  color:white;
   text-align:center;
   border-radius:4px;
   font-weight:600;
@@ -127,7 +137,7 @@ td{ text-align:center; }
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="top-left">
-    <!-- LOGOS (see instructions below) -->
+    <!-- Upload cmr.png and juno.png into your repo -->
     <img src="cmr.png" alt="CMR Logo">
     <img src="juno.png" alt="Juno Logo">
   </div>
@@ -168,10 +178,9 @@ td{ text-align:center; }
     [ B.Tech. Computer Science & Engineering ]
   </div>
 
-  <!-- ONE CONTINUOUS TABLE -->
+  <!-- CONTINUOUS TABLE -->
   <table>
 
-    <!-- STUDENT DETAILS ROWS -->
     <tr>
       <td colspan="5"><b>Student Name:</b> Kushal Gowda G</td>
       <td colspan="6"><b>Exam Name:</b> 147. REGULAR-III, VII-SOET-UG-SEE NOV 2025-2024,2023,2022 BATCHES (Term - III)</td>
@@ -181,7 +190,6 @@ td{ text-align:center; }
       <td colspan="6"><b>Seat No:</b> 24BBTCS128</td>
     </tr>
 
-    <!-- HEADER -->
     <tr>
       <th>Sr.No</th>
       <th>Course Code</th>
@@ -196,7 +204,6 @@ td{ text-align:center; }
       <th>Month & Year</th>
     </tr>
 
-    <!-- DATA -->
     <tr><td>1</td><td>4CSGC2083</td><td class="course">Software Engineering</td><td>47</td><td>21</td><td>68</td><td>3</td><td>B+</td><td>7</td><td>21</td><td>Nov 2025</td></tr>
     <tr><td>2</td><td>4CSGC2092</td><td class="course">Computer Organization and Architecture</td><td>44</td><td>31</td><td>75</td><td>3</td><td>A</td><td>8</td><td>24</td><td>Nov 2025</td></tr>
     <tr><td>3</td><td>4CSPL1022</td><td class="course">Data Structures</td><td>43</td><td>36</td><td>79</td><td>4</td><td>A</td><td>8</td><td>32</td><td>Nov 2025</td></tr>
@@ -206,14 +213,13 @@ td{ text-align:center; }
     <tr><td>7</td><td>CPSES1013</td><td class="course">Making with Electronics</td><td>46</td><td>46</td><td>92</td><td>3</td><td>A+</td><td>9</td><td>27</td><td>Nov 2025</td></tr>
     <tr><td>8</td><td>GPSDA1022</td><td class="course">Career Preparedness Program - II</td><td>39</td><td>-</td><td>39</td><td>0</td><td>A</td><td>8</td><td>0</td><td>Nov 2025</td></tr>
 
-    <tr>
+    <tr class="total-row">
       <th colspan="9">TOTAL</th>
       <th>177</th>
       <th></th>
     </tr>
   </table>
 
-  <!-- SUMMARY -->
   <div class="summary">
     <div class="box blue">SGPA: 8.43</div>
     <div class="box blue">CGPA: 8.43</div>
