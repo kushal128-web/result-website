@@ -79,20 +79,31 @@ table{
   font-size:13px;
   background:#ffffff;
 }
+
 th, td{
   border:1px solid #e2e6ea;
   padding:6px 8px;
   color:#2c3e50;
 }
+
 th{
   background:#edf5fd;
   font-weight:600;
   text-align:center;
 }
+
+/* special rows like Student Name / Exam Name */
+.info-row td{
+  background:#edf5fd;
+  font-weight:600;
+  color:#1f3c5a;
+}
+
 td{
   background:#ffffff;
   text-align:center;
 }
+
 .course{
   text-align:left;
 }
@@ -134,17 +145,14 @@ td{
 
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar">
   <div class="top-left">
-    <!-- Upload cmr.png and juno.png into your repo -->
     <img src="cmr.png" alt="CMR Logo">
     <img src="juno.png" alt="Juno Logo">
   </div>
   <div>Kushal Gowda G (Student)</div>
 </div>
 
-<!-- MENU -->
 <div class="menu">
   <span>Institute</span>
   <span>Personal</span>
@@ -157,35 +165,32 @@ td{
   <span>CSP</span>
 </div>
 
-<!-- BREADCRUMB -->
 <div class="breadcrumb">
   ACADEMIC FUNCTIONS &gt; UNIVERSITY EXAM/RESULT &gt; AUTONOMOUS STUDENT RESULT
 </div>
 
 <div class="container">
 
-  <!-- INFO -->
   <div class="info">
     Above 2021 batches SGPA should be greater than or equal to 4<br>
     Below 2021 batches SGPA should be greater than or equal to 5<br>
     If SGPA is not in above criteria then Result shows Incomplete
   </div>
 
-  <!-- TITLE -->
   <div class="center-title">
     School of Engineering and Technology<br>
     Off Hennur, Bagalur Main Road, Chagalatti, Bangalore-562149<br>
     [ B.Tech. Computer Science & Engineering ]
   </div>
 
-  <!-- CONTINUOUS TABLE -->
   <table>
 
-    <tr>
+    <!-- THESE TWO ROWS NOW MATCH HEADER COLOR -->
+    <tr class="info-row">
       <td colspan="5"><b>Student Name:</b> Kushal Gowda G</td>
       <td colspan="6"><b>Exam Name:</b> 147. REGULAR-III, VII-SOET-UG-SEE NOV 2025-2024,2023,2022 BATCHES (Term - III)</td>
     </tr>
-    <tr>
+    <tr class="info-row">
       <td colspan="5"><b>Academic Batch:</b> 2024-2028</td>
       <td colspan="6"><b>Seat No:</b> 24BBTCS128</td>
     </tr>
